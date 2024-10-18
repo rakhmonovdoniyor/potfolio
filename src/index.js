@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+ 
+import Home from './components/home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ReadMore from './components/readmore/readmore';
+import { WrapFlex } from './styles/homestyle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+  {/* <WrapFlex></WrapFlex> */}
+    <Routes>
+    <Route path='/' element={<Home/> } />
+    <Route path='/readmore' element={<ReadMore/> } />
+    <Route path='/contact'element={<ReadMore/> } />
+    </Routes>
+ 
+    </BrowserRouter>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ 
