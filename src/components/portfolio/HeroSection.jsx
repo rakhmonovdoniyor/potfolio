@@ -1,5 +1,17 @@
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
+import DataObjectRoundedIcon from "@mui/icons-material/DataObjectRounded";
+import RocketLaunchRoundedIcon from "@mui/icons-material/RocketLaunchRounded";
+import TerminalRoundedIcon from "@mui/icons-material/TerminalRounded";
+
+const stackPreviewLines = [
+  "const developer = {",
+  "  frontend: 'React + Next.js',",
+  "  backend: 'Node + Express',",
+  "  database: 'MongoDB',",
+  "  focus: 'Clean product UI'",
+  "};",
+];
 
 function HeroSection({ heroContent }) {
   return (
@@ -36,7 +48,35 @@ function HeroSection({ heroContent }) {
         <div className="hero-visual">
           <div className="photo-stage">
             <div className="photo-frame">
-              <img src={heroContent.profileImage} alt={heroContent.profileAlt} />
+              <div
+                className="stack-preview-card"
+                aria-label="Full stack development preview"
+              >
+                <div className="stack-preview-topbar" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="stack-preview-title">
+                  <TerminalRoundedIcon fontSize="inherit" />
+                  <span>portfolio.jsx</span>
+                </div>
+                <div className="stack-preview-code" aria-hidden="true">
+                  {stackPreviewLines.map((line) => (
+                    <code key={line}>{line}</code>
+                  ))}
+                </div>
+                <div className="stack-preview-tags">
+                  <span>
+                    <DataObjectRoundedIcon fontSize="inherit" />
+                    React UI
+                  </span>
+                  <span>
+                    <RocketLaunchRoundedIcon fontSize="inherit" />
+                    Production ready
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 

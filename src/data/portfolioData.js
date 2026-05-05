@@ -26,7 +26,6 @@ import {
   SiReact,
   SiTypescript,
 } from "react-icons/si";
-import profileImage from "../assets/my/image.png";
 import campingDashboardImage from "../assets/projects/photo_2026-03-16_14-50-51.png";
 import crmImage from "../assets/projects/imagecrm.png";
 import campImage from "../assets/projects/imagecamp.png";
@@ -49,8 +48,6 @@ export const heroContent = {
     "Creates REST APIs with Node.js, Express, MongoDB and Mongoose",
     "Open to frontend and full stack opportunities",
   ],
-  profileImage,
-  profileAlt: "Portrait of Doniyor Rakhmonov",
   focusLabel: "Current focus",
   focusValue: "React, Next.js, Node.js, MongoDB",
   availability: "Samarqand, Uzbekistan - Open to work",
